@@ -8,6 +8,7 @@ def read_input():
             lines.append((line_begin, line_end))
     return lines
 
+
 def create_grid(lines, diagonals=False):
     # grid is 999 x 999
     grid = [[0 for i in range(999)] for j in range(999)]
@@ -50,6 +51,7 @@ def create_grid(lines, diagonals=False):
 
     return grid
 
+
 def part1():
     grid = create_grid(read_input())
     counter = 0
@@ -59,6 +61,7 @@ def part1():
                 counter += 1
     print(counter)
 
+
 def part2():
     grid = create_grid(read_input(), diagonals=True)
     counter = 0
@@ -67,5 +70,6 @@ def part2():
             if pos > 1:
                 counter += 1
     print(counter)
+
 
 part2()
